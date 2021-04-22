@@ -3,13 +3,13 @@ import DiscoverBlock from './DiscoverBlock/components/DiscoverBlock';
 import '../styles/_discover.scss';
 
 export default class Discover extends Component {
-  constructor() {
+  constructor({newReleases, playlists, categories}) {
     super();
 
     this.state = {
-      newReleases: [],
-      playlists: [],
-      categories: []
+      newReleases: newReleases.albums.items,
+      playlists: playlists.playlists.items,
+      categories: categories.categories.items
     };
   }
 

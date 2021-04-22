@@ -3,3 +3,4 @@ node_modules/
 *.log
 .build/
 src/config.js
+src/routes/token.js
