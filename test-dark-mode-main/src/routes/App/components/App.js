@@ -4,15 +4,18 @@ import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import '../styles/_app.scss';
 
 function App() {
-  const [theme, setTheme] = useState("black");
-  console.log(theme);
-  function toggle(){
-    if(theme==="black"){
-      setTheme("#FFA500");
+  const [darkTheme, setDarkTheme] = useState(false);
+
+  function toggleTheme(){
+    if(!darkTheme){
+      setDarkTheme(true);
+      document.body.classList.add('dark-mode');
     }else{
-      setTheme("black");
+      setDarkTheme(false);
+      document.body.classList.remove('dark-mode');
     }
   }
+  
   return (
     <div className="app">
       <div className="level">
@@ -21,8 +24,8 @@ function App() {
         </div>
 
         {/* --The button that should toggle dark mode-- */}
-        <button className="app__dark-mode-btn icon level-right" onClick={toggle}>
-          <FontAwesomeIcon icon={faMoon} color={theme} />
+        <button className="app__dark-mode-btn icon level-right" onClick={toggleTheme}>
+          <FontAwesomeIcon icon={faMoon} />
         </button>
 
       </div>

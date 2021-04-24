@@ -12,8 +12,8 @@ export default async function api(url) {
 
   const dataResponse = await axios.get(`${config.api.baseUrl}/browse/${url}`,
   {  
-    headers: { Authorization: `Bearer ${tokenResponse.data.access_token}` } 
+    headers: { Authorization: `${tokenResponse.data.token_type} ${tokenResponse.data.access_token}` } 
   });
-    
+      
   return dataResponse.data;
 }

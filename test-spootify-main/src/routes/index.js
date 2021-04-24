@@ -63,11 +63,7 @@ export default function Routes() {
   if(!newReleases || !playlists || !categories){
     return null;
   }
-
-  if(newReleases.error){
-    console.log('error:', newReleases.error.message);
-    return(<h2>Something went wrong...</h2>)
-  }
+  
   // Here you'd return an array of routes
   return <Discover newReleases={newReleases} playlists={playlists} categories={categories} />;
 }
