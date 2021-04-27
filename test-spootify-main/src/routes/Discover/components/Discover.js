@@ -3,14 +3,19 @@ import DiscoverBlock from './DiscoverBlock/components/DiscoverBlock';
 import '../styles/_discover.scss';
 
 export default class Discover extends Component {
-  constructor({ newReleases, playlists, categories }) {
+  constructor() {
     super();
-
+    // initialise state
     this.state = {
-      newReleases: newReleases,
-      playlists: playlists,
-      categories: categories
+      newReleases: [],
+      playlists: [],
+      categories: []
     };
+  }
+
+  componentDidMount = () => {
+    // update state
+    this.setState(this.props)
   }
 
   render() {

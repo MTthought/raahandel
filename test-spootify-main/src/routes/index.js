@@ -13,22 +13,22 @@ export default function Routes() {
 
   const endPoints = [
     { 
-      'url': 'new-releases',
-      'key': 'albums',
-      'dataSetter': setNewReleases,
-      'errorSetter': setErrorRelease
+      url: 'new-releases',
+      key: 'albums',
+      dataSetter: setNewReleases,
+      errorSetter: setErrorRelease
     }, 
     {
-      'url': 'featured-playlists',
-      'key': 'playlists',
-      'dataSetter': setPlaylists,
-      'errorSetter': setErrorPlaylist
+      url: 'featured-playlists',
+      key: 'playlists',
+      dataSetter: setPlaylists,
+      errorSetter: setErrorPlaylist
     },
     {
-      'url': 'categories',
-      'key': 'categories',
-      'dataSetter': setCategories,
-      'errorSetter': setErrorCategory
+      url: 'categories',
+      key: 'categories',
+      dataSetter: setCategories,
+      errorSetter: setErrorCategory
     }
     ];
 
